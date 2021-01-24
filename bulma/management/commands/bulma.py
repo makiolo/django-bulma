@@ -63,6 +63,6 @@ Usage example:
 
     def npm_run(self, commands):
         try:
-            subprocess.run(['npm'] + commands, cwd=self.bulma_dir)
+            subprocess.run(['npm'] + commands, shell=True, cwd=self.bulma_dir)
         except KeyboardInterrupt:
             pass
